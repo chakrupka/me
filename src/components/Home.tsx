@@ -7,42 +7,16 @@ function Home() {
   const location = useLocation();
   const initialHeight = useRef(window.innerHeight);
   const initialProgress = location.state?.scrollProgress ?? 0;
+
+  if (initialProgress > 0 && window.scrollY === 0) {
+    const limitPx = (SCROLL_VH / 100) * initialHeight.current;
+    const targetScroll = initialProgress * limitPx;
+    window.scrollTo(0, targetScroll);
+  }
+
   const [progress, setProgress] = useState(initialProgress);
   const scrollRafRef = useRef<number | null>(null);
-  const hasRestoredScroll = useRef(false);
 
-  useEffect(() => {
-    if (initialProgress > 0 && !hasRestoredScroll.current) {
-      hasRestoredScroll.current = true;
-      const limitPx = (SCROLL_VH / 100) * initialHeight.current;
-      const targetScroll = initialProgress * limitPx;
-      window.scrollTo(0, targetScroll);
-    }
-
-    const limitPx = (SCROLL_VH / 100) * initialHeight.current;
-    let lastY = 0;
-
-    const onScroll = () => {
-      lastY = window.scrollY;
-
-      if (scrollRafRef.current !== null) return;
-
-      scrollRafRef.current = requestAnimationFrame(() => {
-        const p = limitPx > 0 ? Math.min(lastY / limitPx, 1) : 0;
-        setProgress(p);
-        scrollRafRef.current = null;
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      if (scrollRafRef.current !== null) {
-        cancelAnimationFrame(scrollRafRef.current);
-      }
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
   useEffect(() => {
     const limitPx = (SCROLL_VH / 100) * initialHeight.current;
     let lastY = 0;
