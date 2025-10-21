@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useLayoutEffect, useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 function Home() {
@@ -8,21 +8,22 @@ function Home() {
   const initialHeight = useRef(window.innerHeight);
   const initialProgress = location.state?.scrollProgress ?? 0;
 
-  if (initialProgress > 0 && window.scrollY === 0) {
-    const limitPx = (SCROLL_VH / 100) * initialHeight.current;
-    const targetScroll = initialProgress * limitPx;
-    window.scrollTo(0, targetScroll);
-  }
-
   const [progress, setProgress] = useState(initialProgress);
   const scrollRafRef = useRef<number | null>(null);
 
+  useLayoutEffect(() => {
+    if (initialProgress > 0) {
+      const limitPx = (SCROLL_VH / 100) * initialHeight.current;
+      const targetScroll = initialProgress * limitPx;
+      window.scrollTo(0, targetScroll);
+    }
+  }, [initialProgress]);
+
   useEffect(() => {
     const limitPx = (SCROLL_VH / 100) * initialHeight.current;
-    let lastY = 0;
 
     const onScroll = () => {
-      lastY = window.scrollY;
+      const lastY = window.scrollY;
 
       if (scrollRafRef.current !== null) return;
 
@@ -34,6 +35,7 @@ function Home() {
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
+
     return () => {
       window.removeEventListener("scroll", onScroll);
       if (scrollRafRef.current !== null) {
