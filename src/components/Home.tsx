@@ -50,10 +50,7 @@ function Home() {
   const shift = maxShift * progress;
 
   return (
-    <div
-      className="relative min-h-[200vh] overscroll-none dark:bg-black"
-      style={{ overscrollBehavior: "none" }}
-    >
+    <div className="relative min-h-[200vh] overscroll-none dark:bg-black">
       <div
         className="fixed inset-0 z-0 flex flex-col items-center justify-center gap-5 text-5xl dark:text-white"
         style={{ opacity: `${scale == 0.3 ? 1 : 1 - scale}` }}
