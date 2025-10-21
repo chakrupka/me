@@ -108,12 +108,18 @@ function Home() {
           style={{ transform: `scaleY(${scale})` }}
         />
         <div
-          className="pointer-events-auto absolute inset-x-0 top-0 flex justify-center will-change-transform"
+          className="pointer-events-auto absolute inset-x-0 top-0 flex flex-col items-center justify-center will-change-transform"
           style={{ transform: `translateY(${shift}px)` }}
         >
           <h1 className="pointer-events-none text-7xl text-black select-none dark:text-white">
             krupka
           </h1>
+          <p
+            className="pt-10 text-4xl dark:text-white"
+            style={{ opacity: `${scale == 1 ? 1 : scale - 0.3}` }}
+          >
+            ↓
+          </p>
         </div>
       </div>
     </div>
