@@ -19,7 +19,7 @@ function Projects() {
         on{" "}
         <a
           href="https://www.github.com/chakrupka"
-          className="text-black hover:underline dark:text-white"
+          className="text-black underline dark:text-white"
         >
           github
         </a>
