@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 html,
 body,
 #root {
@@ -7,6 +17,17 @@ body,
   width: 100%;
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
+}
+
+html,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 * {
