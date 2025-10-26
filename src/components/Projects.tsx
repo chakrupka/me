@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { projectsData } from "../data/projectsData";
 
 function Projects() {
   const location = useLocation();
@@ -12,18 +13,27 @@ function Projects() {
       >
         ← back
       </Link>
-      <h1 className="w-2/3 pb-5 text-center text-2xl dark:text-white">
-        projects
-      </h1>
-      <p className="w-2/3 text-center text-xl dark:text-white">
-        on{" "}
-        <a
-          href="https://www.github.com/chakrupka"
-          className="text-black underline dark:text-white"
-        >
-          github
-        </a>
-      </p>
+      <div className="flex w-3/4 flex-col items-start justify-center gap-7 pt-15 sm:w-fit sm:pt-0">
+        {projectsData.map((project, ind) => (
+          <Link
+            to={`./${project.id}`}
+            key={ind}
+            className="flex flex-col"
+            state={{ scrollProgress: location.state?.scrollProgress }}
+          >
+            {/* <img
+              className="sm: w-120 overflow-clip"
+              src={`./public/project_thumbnails/${project.thumbnail}`}
+            /> */}
+            <h2 className="text-xl sm:text-2xl dark:text-white">
+              {project.title}
+            </h2>
+            <p className="text-gray-700 dark:text-gray-400">
+              {project.subtitle}
+            </p>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
