@@ -6,6 +6,7 @@ import { Mousewheel, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { ArrowIcon } from "./ArrowIcon";
 
 function ProjectDetail() {
   const location = useLocation();
@@ -24,15 +25,18 @@ function ProjectDetail() {
   };
 
   const renderYouTubeEmbed = () => (
-    <div className="relative w-full pb-[56.25%]">
-      <iframe
-        className="absolute top-0 left-0 h-full w-full rounded-lg"
-        src="https://www.youtube.com/embed/Co7IYRsKCK0"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </div>
+    <>
+      <h2 className="mb-4 text-xl sm:text-2xl dark:text-white">Demo</h2>
+      <div className="relative w-full pb-[56.25%]">
+        <iframe
+          className="absolute top-0 left-0 h-full w-full rounded-lg"
+          src="https://www.youtube.com/embed/Co7IYRsKCK0"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </>
   );
 
   const renderGallery = (viewType: "mobile" | "landscape") => (
@@ -101,6 +105,35 @@ function ProjectDetail() {
           {project?.title}
         </h1>
         <p className="mb-4 dark:text-white">{project?.content.overview}</p>
+        {(project?.content.github_link || project?.content.website_link) && (
+          <>
+            <h2 className="mb-2 text-xl sm:text-2xl dark:text-white">Links</h2>
+            <div className="flex gap-5">
+              {project?.content.website_link && (
+                <a
+                  href={project.content.website_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mb-4 flex cursor-pointer text-lg underline decoration-transparent transition-colors duration-300 ease-in-out hover:decoration-current dark:text-white"
+                >
+                  Website
+                  {ArrowIcon()}
+                </a>
+              )}
+              {project?.content.github_link && (
+                <a
+                  href={project.content.github_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mb-4 flex cursor-pointer text-lg underline decoration-transparent transition-colors duration-300 ease-in-out hover:decoration-current dark:text-white"
+                >
+                  Code
+                  {ArrowIcon()}
+                </a>
+              )}
+            </div>
+          </>
+        )}
         {renderContent()}
       </div>
     </div>
