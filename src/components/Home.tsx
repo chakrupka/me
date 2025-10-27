@@ -69,13 +69,14 @@ function Home() {
         >
           PROJECTS
         </Link>
-        <Link
-          to="/"
-          state={{ scrollProgress: progress }}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="Krupka_Resume_2025.pdf"
           className="cursor-pointer underline decoration-transparent transition-colors duration-300 ease-in-out hover:decoration-current"
         >
           RÉSUMÉ
-        </Link>
+        </a>
       </div>
 
       <div
