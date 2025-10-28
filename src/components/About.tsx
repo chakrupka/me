@@ -24,7 +24,7 @@ function About() {
         lookout for ways to broaden my skills. I am primarily a full-stack
         developer but have experience working with big data and machine
         learning. I adore clean, functional design and often find myself
-        obsessing over the little details. Away from the computer, I take great
+        obsessing over the little details. Apart from coding, I take great
         pleasure in film, fashion, competitive video games, and the occasional
         run outdoors.
       </p>
