@@ -20,7 +20,7 @@ export const projectsData = [
     subtitle: "Plan trips together, effortlessly",
     content: {
       overview:
-        "Planning a trip with multiple people can be difficult — keeping track of flights and hotels and dates across different group chats or email chains is a mess. Over the winter in 2025, ahead of spring break, I lead a small team to create TripTies. TripTies centralizes everything in one place, and encourages user interaction with a roadmap. Begin by entering your availability, and TripTies makes it easy to see what time is the best for everyone. Track flights, search hotels, and then visualize everything on a map. Share the trip link with friends to let them view and join your trip with ease. Not currently optimized for mobile.",
+        "Planning a trip with multiple people can be difficult — keeping track of flights and hotels and dates across different group chats or email chains is a mess. Over the winter in 2025, ahead of spring break, I led a small team to create TripTies. TripTies centralizes everything in one place, and encourages user interaction with a roadmap. Begin by entering your availability, and TripTies makes it easy to see what time is the best for everyone. Track flights, search hotels, and then visualize everything on a map. Share the trip link with friends to let them view and join your trip with ease. Not currently optimized for mobile.",
       technologies: [],
       images: [],
       github_link: "https://github.com/chakrupka/tripcoordinator-frontend",
