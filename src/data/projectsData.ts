@@ -12,6 +12,22 @@ export const projectsData = [
       website_link: "https://rops.onrender.com",
       image_type: "mobile",
     },
+    effort: "solo",
+  },
+  {
+    title: "TripTies",
+    id: "tripties",
+    subtitle: "Plan trips together, effortlessly",
+    content: {
+      overview:
+        "Planning a trip with multiple people can be difficult — keeping track of flights and hotels and dates across different group chats or email chains is a mess. Over the winter in 2025, ahead of spring break, I lead a small team to create TripTies. TripTies centralizes everything in one place, and encourages user interaction with a roadmap. Begin by entering your availability, and TripTies makes it easy to see what time is the best for everyone. Track flights, search hotels, and then visualize everything on a map. Share the trip link with friends to let them view and join your trip with ease. Not currently optimized for mobile.",
+      technologies: [],
+      images: [],
+      github_link: "https://github.com/chakrupka/tripcoordinator-frontend",
+      website_link: "https://project-trip-coordinator.onrender.com",
+      image_type: "video",
+    },
+    effort: "team",
   },
   {
     title: "Steal a Meal",
@@ -19,7 +35,7 @@ export const projectsData = [
     subtitle: "Never eat alone again",
     content: {
       overview:
-        "With terms at Dartmouth being just ten weeks long, they were often jam-packed and only seemed to get busier as the weeks progressed. Grabbing meals with friends quickly goes from an easy task to a difficult balancing act. To try and ease this struggle faced by many Dartmouth students, Steal A Meal was created. The app allows users to easily ping friends (or groups of friends) for meals. Location-based services let in-app friends see where other friends are currently eating, and the ability to enter schedules makes planning meals easier than ever.",
+        "With terms at Dartmouth being just ten weeks long, they were often jam-packed and only seemed to get busier as the weeks progressed. Grabbing meals with friends quickly goes from an easy task to a difficult balancing act. To try and ease this struggle faced by many Dartmouth students, three peers and I created Steal a Meal. The app allows users to easily ping friends (or groups of friends) for meals. Location-based services let in-app friends see where other friends are currently eating, and the ability to enter schedules makes planning meals easier than ever.",
       technologies: [],
       images: [
         "splash.jpg",
@@ -38,28 +54,16 @@ export const projectsData = [
       website_link: "",
       image_type: "mobile",
     },
+    effort: "team",
   },
-  {
-    title: "TripTies",
-    id: "tripties",
-    subtitle: "Plan trips together, effortlessly",
-    content: {
-      overview:
-        "Planning a trip with multiple people can be difficult — keeping track of flights and hotels and dates across different group chats or email chains is a mess. TripTies centralizes everything in one place, and encourages user interaction with a roadmap. Begin by entering your availability, and TripTies makes it easy to see what time is the best for everyone. Track flights, search hotels, and then visualize everything on a map. Share the trip link with friends to let them view and join your trip with ease. Not currently optimized for mobile.",
-      technologies: [],
-      images: [],
-      github_link: "https://github.com/chakrupka/tripcoordinator-frontend",
-      website_link: "https://project-trip-coordinator.onrender.com",
-      image_type: "video",
-    },
-  },
+
   {
     title: "Indigenous Language Spell Corrector",
     id: "spellcorrector",
     subtitle: "Preserving language through AI",
     content: {
       overview:
-        "Cook Islands Māori (CIM) is the indigenous Polynesian language spoken in the Cook Islands by roughly 17,000-18,000 fluent speakers. Considered an endangered language, significant revitalization efforts have been made to preserve it, especially in regard to digitization. Making the language digitally accessible is almost necessary in today's world, and one such facet is the implementation of a viable spell corrector. By parsing scripts of cleaned spoken dialogue, a dictionary of CIM words was able to be created. Noise was introduced into the dataset through random and directed errors, and then a T5 text-to-text transformer was fine-tuned on the datasets. The result was a spell corrector that offered significantly better error detection and resolve than previous tools. Our model's word error rate was 7.43%, down from 22.14% in the only commercially available corrector. ",
+        "Cook Islands Māori (CIM) is the indigenous Polynesian language spoken in the Cook Islands by roughly 17,000-18,000 fluent speakers. Considered an endangered language, significant revitalization efforts have been made to preserve it, especially in regard to digitization. Making the language digitally accessible is almost necessary in today's world, and one such facet is the implementation of a viable spell corrector. With the help of two fellow students, we began by parsing scripts of cleaned spoken dialogue, creating a dictionary of CIM words. Noise was introduced into the dataset through random and directed errors, and then a T5 text-to-text transformer was fine-tuned on the datasets. The result was a spell corrector that offered significantly better error detection and resolve than previous tools. Our model's word error rate was 7.43%, down from 22.14% in the only commercially available corrector. ",
       technologies: [],
       images: [],
       github_link:
@@ -67,6 +71,7 @@ export const projectsData = [
       website_link: "",
       image_type: "none",
     },
+    effort: "team",
   },
   {
     title: "Stats For The Times",
@@ -81,6 +86,7 @@ export const projectsData = [
       website_link: "https://statsforthetimes.com",
       image_type: "mobile",
     },
+    effort: "solo",
   },
   {
     title: "Five v Five",
@@ -95,6 +101,7 @@ export const projectsData = [
       website_link: "https://fivevfive.com",
       image_type: "landscape",
     },
+    effort: "solo",
   },
   // {
   //   title: "Energy Kiosk",

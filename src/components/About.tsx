@@ -6,7 +6,7 @@ function About() {
   const [copied, setCopied] = useState(false);
 
   return (
-    <div className="mt-20 flex h-full flex-col items-center justify-center sm:-mt-20 dark:bg-black">
+    <div className="mt-10 flex h-full flex-col items-center justify-center sm:-mt-20 dark:bg-black">
       <Link
         to="/"
         state={{ scrollProgress: location.state?.scrollProgress }}
@@ -17,15 +17,15 @@ function About() {
       <h1 className="w-2/3 pb-4 text-center text-2xl dark:text-white">
         About me
       </h1>
-      <p className="w-4/5 text-center text-lg dark:text-white">
-        I am a passionate software engineer currently living in New York, New
-        York after graduating from Dartmouth College in June of 2025. I love
-        tackling real-world problems with immediate use cases, and am always on
-        the lookout for ways to broaden my skills. I am primarily a full-stack
+      <p className="w-4/5 max-w-[650px] text-center text-lg dark:text-white">
+        I am a passionate software engineer currently living in New York City
+        after graduating from Dartmouth College in June of 2025. I love tackling
+        real-world problems with immediate use cases, and am always on the
+        lookout for ways to broaden my skills. I am primarily a full-stack
         developer but have experience working with big data and machine
         learning. I adore clean, functional design and often find myself
         obsessing over the little details. Away from the computer, I take great
-        pleasure in film, fashion, competetive video games, and the occasional
+        pleasure in film, fashion, competitive video games, and the occasional
         run outdoors.
       </p>
       <h1 className="w-2/3 pt-8 pb-2 text-center text-2xl dark:text-white">
